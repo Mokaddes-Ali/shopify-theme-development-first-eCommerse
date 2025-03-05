@@ -11,7 +11,7 @@
   }
 
   .text-title {
-    @apply font-bold text-[64px] leading-[64px] tracking-[0%] bg-[rgba(0,0,0,1)];
+    @apply font-bold text-[64px] leading-[64px] tracking-[0%] text-[rgba(0,0,0,1)];
     font-family: "Integral CF", sans-serif;
   }
 
@@ -60,6 +60,13 @@
     font-family: "Satoshi", sans-serif;
   }
 
+  .footer-heading{
+    @apply font-bold text-[40px] leading-[45px] tracking-[0%];
+    font-family: "Integral CF", sans-serif;
+  }
+.footer-button{
+    @apply w-[349px] h-[46px] rounded-[62px] pt-[12px] pr-[16px] pb-[12px] pl-[16px] gap-[12px] bg-[rgba(255,255,255,1)];
+}
   .top-bar a{
     @apply underline font-black text-white;
   }
