@@ -4,6 +4,62 @@
     @apply mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24;
   }
 
+
+  .text-custom {
+    @apply font-[400] text-[16px] leading-[21.6px] tracking-[0%] bg-[rgba(0,0,0,1)];
+    font-family: "Satoshi", sans-serif;
+  }
+
+  .text-title {
+    @apply font-bold text-[64px] leading-[64px] tracking-[0%] bg-[rgba(0,0,0,1)];
+    font-family: "Integral CF", sans-serif;
+  }
+
+  .text-small {
+    @apply font-[400px] text-[16px] leading-[22px] tracking-[0%] text-[rgba(0,0,0,0.6)];
+    font-family: "Satoshi", sans-serif;
+  }
+
+  .hero-heading {
+    @apply font-bold text-[64px] leading-[64px] tracking-[0%];
+    font-family: "Integral CF", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .button-custom {
+    @apply w-[210px] h-[52px] rounded-[62px] px-[54px] py-[16px] gap-[12px] bg-[rgba(0,0,0,1)];
+  
+  }
+
+  .button-text {
+    @apply text-[16px] leading-[21.6px] tracking-[0%] text-[rgba(255,255,255,1)];
+    font-family: "Satoshi", sans-serif;
+    font-weight: 500;
+  }
+
+  .hero-count{
+      @apply font-bold text-[40px] leading-[54px] tracking-[0%] bg-[rgba(0,0,0,1)];
+      font-family: "Satoshi", sans-serif;
+  }
+
+  .bg-primary {
+    @apply bg-[rgba(242,240,241,1)];
+  }
+  .product-name {
+    @apply font-bold text-[20px] leading-[27px] tracking-[0%] bg-[rgba(0,0,0,1)];
+    font-family: "Satoshi", sans-serif;
+  }
+
+  .product-price {
+    @apply font-bold text-[24px] leading-[32.4px] tracking-[0%] bg-[rgba(0,0,0,1)];
+    font-family: "Satoshi", sans-serif;
+  }
+
+  .product-price-old {
+    @apply font-bold text-[24px] leading-[32.4px] tracking-[0%] bg-[rgba(0,0,0,0.4)] line-through;
+    font-family: "Satoshi", sans-serif;
+  }
+
   .top-bar a{
     @apply underline font-black text-white;
   }
