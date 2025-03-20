@@ -1,20 +1,184 @@
 <div class="bg-primary">
-    <div class="container -mx-4">
-        <div class="flex flex-col lg:flex-row justify-between items-center">
-            <div class="w-full lg:w-6/12 text-center lg:text-left">
+    <div class="container">
+        <div class="flex pt-10">
+            <div class="w-1/2 space-y-4">
                 <p class="hero-heading">FIND CLOTHES THAT MATCHES YOUR STYLE</p>
                 <p class="text-small">Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
+                <a class="" href="#">   
                 <button class="button-custom"><span class="button-text">Shop Now</span></button>
-                <div class="flex justify-center lg:justify-start mt-4 lg:mt-0">
-                    <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
-                    <span class="w-2 h-2 bg-gray-700 rounded-full"></span>
-                    <span class="w-2 h-2 bg-gray-700 rounded-full"></span>
-                    <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
+               </a> 
+                <div class="flex mt-6">
+                    {% for i in (1..3) %}
+                        <div class="w-1/3 p-2 border-r last:border-r-0 border-black text-left">
+                            <div class="text-3xl font-bold">200+</div>
+                            <div class="font-[Satoshi] font-normal text-[16px] leading-[22px] tracking-[0]">
+                                Customized Collections
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
+                
             </div>
-            <div class="w-full lg:w-6/12 mt-4 lg:mt-0">
-            <img src="{{'Hero.png' |  asset_url}}" alt="Hero Image" class="w-full">  
+            <div class="w-1/2 flex justify-end">
+            <img src="{{'Hero.png' |  asset_url}}" alt="Hero Image" class="w-full h-auto">  
             </div>
         </div>
     </div>
 </div>
+
+
+<div class="bg-black py-10">
+    <div class="container">
+        <div class="flex">
+                {% for i in (1..5) %}
+                    <div class="flex-1">
+                        <img src="{{'company'  | append: i | append:'.png' |  asset_url}}" alt="Image" class="">    
+                    </div>
+                {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+<div class="py-10">
+    <div class="container">
+        <div class="mb-16">
+    <h3 class="text-title text-center">New Arrivals</h3>
+    </div>
+        <div class="flex -mx-4">
+            {% for i in (1..4) %}
+                <div class="w-1/4 px-4">
+                    <div class="bg-gray-100 rounded-lg">
+                        <img src="{{'product1.png' |  asset_url}}" alt="Product Image" class="w-full h-auto">
+                    </div>
+                    <div class="mt-4">
+                        <p class="product-name">Product Name</p>
+                        <div class="flex items-center mt-2">
+                            <span class="text-yellow-400">★★★★★</span>
+                            <span class="text-sm text-gray-600 ml-2">5.00/5</span>
+                        </div>
+                        <p class="product-price">$350</p>
+                    </div>
+                </div>
+            {% endfor %}
+         </div>
+        </div>    
+</div>
+
+
+
+
+<div class="py-12">
+    <div class="container">
+        <div class="mb-16">
+    <h3 class="text-title text-center">Top Selling</h3>
+    </div>
+        <div class="flex -mx-4">
+            {% for i in (1..4) %}
+                <div class="w-1/4 px-4">
+                    <div class="bg-gray-100 rounded-lg">
+                        <img src="{{'product2.png' |  asset_url}}" alt="Product Image" class="w-full h-auto">
+                    </div>
+                    <div class="mt-4">
+                        <p class="product-name">Product Name</p>
+                        <div class="flex items-center mt-2">
+                            <span class="text-yellow-400">★★★★★</span>
+                            <span class="text-sm text-gray-600 ml-2">5.00/5</span>
+                        </div>
+                        <p class="product-price">$350</p>
+                    </div>
+                </div>
+            {% endfor %}
+         </div>
+        </div>    
+</div>
+
+{% comment %} BROWSE BY DRESS STYLE {% endcomment %}
+<div class="py-10">
+    <div class="container">
+        <div class="bg-gray-200 rounded-2xl p-4"> 
+            <div class="py-10">
+                <h3 class="text-title text-center uppercase">Browse By Dress Style</h3>
+            </div>
+
+            <div class="flex">
+                <div class="w-4/12 p-4">
+                    <img class="w-full h-[250px] object-cover rounded-lg" src="{{ 'customer1.png' | asset_url }}" alt="Style Image">
+                </div>
+                <div class="w-8/12 p-4">
+                    <img class="w-full h-[250px] object-cover rounded-lg" src="{{ 'customer2.png' | asset_url }}" alt="Style Image">
+                </div>
+            </div>
+
+            <div class="flex mt-4">
+                <div class="w-8/12 p-4">
+                    <img class="w-full h-[250px] object-cover rounded-lg" src="{{ 'customer3.png' | asset_url }}" alt="Style Image">
+                </div>
+                <div class="w-4/12 p-4">
+                    <img class="w-full h-[250px] object-cover rounded-lg" src="{{ 'customer4.png' | asset_url }}" alt="Style Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="w-full max-w-4xl mx-auto relative">
+    <!-- Left Arrow Button -->
+    <button class="absolute top-1/2 -left-6 transform -translate-y-1/2 slick-prev bg-gray-200 hover:bg-gray-400 p-2 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+    </button>
+
+    <!-- Review Slider -->
+    <div class="review-slider">
+        {% for i in (1..10) %}
+        <div class="bg-white p-6 rounded-xl shadow-lg border">
+            <!-- Star Ratings -->
+            <div class="flex gap-1 mb-2">
+                {% for star in (1..5) %}
+                    <img src="{{ 'star.png' | asset_url }}" alt="star" class="w-5 h-5">
+                {% endfor %}
+            </div>
+
+            <!-- Customer Name & Verified Badge -->
+            <div class="flex items-center gap-2">
+                <p class="font-bold text-lg">Sarah M.</p>
+                <span class="w-5 h-5 flex items-center justify-center bg-green-500 text-white text-sm font-bold rounded-full">✓</span>
+            </div>
+
+            <!-- Review Text -->
+            <p class="text-gray-700 mt-2">
+                "I'm blown away by the quality and style of the clothes I received from Shop.co. 
+                From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Right Arrow Button -->
+    <button class="absolute top-1/2 -right-6 transform -translate-y-1/2 slick-next bg-gray-200 hover:bg-gray-400 p-2 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+    </button>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.review-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            infinite: true,
+            prevArrow: $('.slick-prev'), // Left Arrow Button
+            nextArrow: $('.slick-next'), // Right Arrow Button
+            responsive: [
+                { breakpoint: 1024, settings: { slidesToShow: 2 } },
+                { breakpoint: 640, settings: { slidesToShow: 1 } }
+            ]
+        });
+    });
+</script>
