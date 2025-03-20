@@ -60,3 +60,13 @@ h1,h2,h3,h4,h5,h6{
     font:Integral CF, sans-serif;
     font-weight: bold;
 }
+
+.review-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.review-card {
+    width: 100%;
+    margin: 0 10px; /* Adjust margin as needed */
+}

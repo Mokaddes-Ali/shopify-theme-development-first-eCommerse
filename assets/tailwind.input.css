@@ -11,7 +11,8 @@
   }
 
   .text-title{
-    @apply font-[Integral CF] font-bold text-[40px] leading-[100%] tracking-[0];
+    @apply font-bold text-[40px] leading-[100%] tracking-[0];
+    font-family: "Integral CF", sans-serif;
   }
 
   .text-small {
