@@ -1,5 +1,52 @@
 @import "tailwindcss";
 
+
+ /* Satoshi Font */
+@font-face {
+  font-family: 'Satoshi';
+  src: url( '{{"Satoshi-Regular.woff2" | asset_url }}') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url( '{{"Satoshi-Bold.woff2" | asset_url }}') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Integral Font */
+@font-face {
+  font-family: 'Integral CF';
+  src: url('{{ "IntegralCF-Regular.woff2" | asset_url }}') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Integral CF';
+  src: url('{{ "IntegralCF-Bold.woff2" | asset_url }}') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@theme{
+  --font-integral: 'Integral CF', sans-serif;
+  --font-satoshi: 'Satoshi', sans-serif;
+}
+
+
+
+/* তোমার নিজের custom class */
+@layer components {
+  .home-route {
+    @apply text-[rgba(0,0,0,0.6)] text-[16px] font-normal font-[400] leading-normal font-[Satoshi];
+  }
+}
+
+
 .container{
     @apply mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 2xl:px-24;
   }
