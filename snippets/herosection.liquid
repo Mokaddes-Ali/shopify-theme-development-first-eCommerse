@@ -20,7 +20,7 @@
                 
             </div>
             <div class="w-1/2 flex justify-end">
-            <img src="{{'Hero.png' |  asset_url}}" alt="Hero Image" class="w-full h-auto">  
+            <img src="{{ 'Hero.png' | asset_url }}" alt="Hero Image" width="1200" height="600" class="w-full h-auto">  
             </div>
         </div>
     </div>
@@ -30,11 +30,17 @@
 <div class="bg-black py-10">
     <div class="container">
         <div class="flex">
-                {% for i in (1..5) %}
-                    <div class="flex-1">
-                        <img src="{{'company'  | append: i | append:'.png' |  asset_url}}" alt="Image" class="">    
-                    </div>
-                {% endfor %}
+            {% for i in (1..5) %}
+                <div class="flex-1">
+                  <img 
+                    src="{{ 'company' | append: i | append: '.png' | asset_url }}" 
+                    alt="Image {{ i }}" 
+                    width="200" 
+                    height="100" 
+                    class="w-full h-auto"
+                  >
+                </div>
+              {% endfor %}              
         </div>
     </div>
 </div>
@@ -101,23 +107,27 @@
             <div class="py-10">
                 <h3 class="text-title text-center uppercase">Browse By Dress Style</h3>
             </div>
-
-            <div class="flex">
-                <div class="w-4/12 p-4">
-                    <img class="w-full h-[250px] object-cover rounded-lg" src="{{ 'customer1.png' | asset_url }}" alt="Style Image">
+            <div class="space-y-4">
+                <!-- First Row -->
+                <div class="flex flex-wrap">
+                  <div class="w-full md:w-4/12 p-4">
+                    <img class="w-full h-[250px] object-cover rounded-lg" src="{{ 'customer1.png' | asset_url }}" alt="Customer Image 1">
+                  </div>
+                  <div class="w-full md:w-8/12 p-4">
+                    <img class="w-full h-[250px] object-cover rounded-lg" src="{{ 'customer2.png' | asset_url }}" alt="Customer Image 2">
+                  </div>
                 </div>
-                <div class="w-8/12 p-4">
-                    <img class="w-full h-[250px] object-cover rounded-lg" src="{{ 'customer2.png' | asset_url }}" alt="Style Image">
+              
+                <!-- Second Row -->
+                <div class="flex flex-wrap">
+                  <div class="w-full md:w-8/12 p-4">
+                    <img class="w-full h-[250px] object-cover rounded-lg" src="{{ 'customer3.png' | asset_url }}" alt="Customer Image 3">
+                  </div>
+                  <div class="w-full md:w-4/12 p-4">
+                    <img class="w-full h-[250px] object-cover rounded-lg" src="{{ 'customer4.png' | asset_url }}" alt="Customer Image 4">
+                  </div>
                 </div>
-            </div>
-            <div class="flex mt-4">
-                <div class="w-8/12 p-4">
-                    <img class="w-full h-[250px] object-cover rounded-lg" src="{{ 'customer3.png' | asset_url }}" alt="Style Image">
-                </div>
-                <div class="w-4/12 p-4">
-                    <img class="w-full h-[250px] object-cover rounded-lg" src="{{ 'customer4.png' | asset_url }}" alt="Style Image">
-                </div>
-            </div>
+              </div>              
         </div>
     </div>
 </div>
